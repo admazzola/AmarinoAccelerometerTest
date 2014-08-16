@@ -49,10 +49,10 @@ void loop()
  float data[3] = {0};
 void accel(byte flag, byte numOfValues)
 {
-  // we use getInt(), since we know only data between 0 and 360 will be sent
+  // put the 3 floats in data
    meetAndroid.getFloatValues(data);
 
-  flushLed(data[0]); // silly, you should have better ideas
+  flushLed(data[0]); // only pass the X data for now
 }
 
 void flushLed(float tilt)
